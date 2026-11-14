@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho - Sushi San</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <a class="logo" href="index.html">🍣 Sushi San</a>
+    <button class="hamburguer" onclick="abrirMenu()" aria-label="Abrir menu">☰</button>
+    <nav id="menu" class="menu">
+      <a href="index.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="pedidos.html">Pedidos</a>
+      <a href="carrinho.html">Carrinho <span class="contador">0</span></a>
+      <a href="perfil.html">Perfil</a>
+      <span id="areaLogin">
+        <a class="btn-mini" href="login.html">Entrar</a>
+        <a class="btn-mini destaque" href="login.html?aba=cadastro">Cadastrar</a>
+      </span>
+      <button id="btnTema" class="tema" onclick="trocarTema()">☀️</button>
+    </nav>
+  </header>
+
+  <h1 class="titulo-pagina">Carrinho</h1>
+
+  <div class="carrinho-layout">
+    <div id="listaCarrinho"></div>
+
+    <aside class="resumo">
+      <h3>Resumo</h3>
+      <div class="linha"><span>Subtotal</span><span id="subtotal">R$ 0,00</span></div>
+      <div class="linha"><span>Frete</span><span id="frete">R$ 0,00</span></div>
+      <div class="linha"><span>Desconto</span><span id="desc">- R$ 0,00</span></div>
+      <div class="campo" style="margin-top:12px">
+        <label for="cupom">Cupom (teste: SUSHI10)</label>
+        <div class="linha">
+          <input type="text" id="cupom" maxlength="12" style="width:100%">
+          <button class="btn" onclick="aplicarCupom()">OK</button>
+        </div>
+      </div>
+      <div class="linha total"><span>Total</span><span id="total">R$ 0,00</span></div>
+      <button class="btn" onclick="finalizarPedido()">Finalizar pedido</button>
+    </aside>
+  </div>
+
+  <footer class="rodape">
+    <div class="rodape-grade">
+      <div><h4>🍣 Sushi San</h4><p>Frescor de verdade, em qualquer hora.</p></div>
+      <div><h4>Navegação</h4><a href="produtos.html">Produtos</a><a href="pedidos.html">Meus pedidos</a><a href="carrinho.html">Carrinho</a></div>
+      <div><h4>Conta</h4><a href="login.html">Entrar</a><a href="login.html?aba=cadastro">Cadastrar</a><a href="perfil.html">Perfil</a></div>
+      <div><h4>Contato</h4><p>(31) 99690-5239 </p><p>22500367@aluno.cotemig.com</p></div>
+    </div>
+    <p class="copy">© 2026 Sushi San - Site sushi </p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>mostrarCarrinho();</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sushi San - Delivery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <a class="logo" href="index.html">🍣 Sushi San</a>
+    
+    <nav id="menu" class="menu">
+      <a href="index.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="pedidos.html">Pedidos</a>
+      <a href="carrinho.html">Carrinho <span class="contador">0</span></a>
+      <a href="perfil.html">Perfil</a>
+      <span id="areaLogin">
+        <a class="btn-mini" href="login.html">Entrar</a>
+        <a class="btn-mini destaque" href="login.html?aba=cadastro">Cadastrar</a>
+      </span>
+      <button id="btnTema" class="tema" onclick="trocarTema()">☀️</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-texto">
+      <h1><span>Sushi</span> pra toda hora. Frescor pra toda fome.</h1>
+      <p>Peixes frescos, arroz no ponto e entrega rápida na sua casa. Peça agora o seu sushi favorito!</p>
+
+      
+      <form class="busca-home" action="produtos.html" method="get">
+        <input type="text" name="busca" placeholder="Buscar sushi, temaki, poke..." maxlength="30">
+        <button class="btn" type="submit">Buscar</button>
+      </form>
+
+      <div><a class="btn" href="produtos.html">pedir agora</a></div>
+    </div>
+
+    <div class="hero-fotos">
+      <div class="prato"> <img src="canva-adorável-personagem-de-sushi-de-salmão-com-expressão-alegre,-perfeito-para-ilustrações-de-comida.-MAG6jP6yxCI.png" width="250" height="200" alt="Sushi 1"> </div>
+      <div class="prato"> <img src="image-removebg-preview.png" width="350" height="350" alt="Sushi 2"> </div>
+      <div class="prato"> <img src="image-removebg-preview (1).png" width="310" height="310" alt="Sushi 3"> </div>
+      <div class="prato"> <img src="image-removebg-preview (2).png" width="310" height="310" alt="Sushi 4"> </div>
+    </div>
+  </section>
+
+  <section class="secao">
+    <h2>Como funciona</h2>
+    <div class="passos">
+      <div class="passo"><div class="icone">📱</div><h3>1. Escolha</h3><p>Navegue pelo cardápio e monte seu pedido.</p></div>
+      <div class="passo"><div class="icone">👨‍🍳</div><h3>2. Preparamos</h3><p>Nossos sushimen preparam tudo na hora.</p></div>
+      <div class="passo"><div class="icone">🛵</div><h3>3. Entregamos</h3><p>Seu sushi chega fresquinho na sua porta.</p></div>
+    </div>
+  </section>
+
+  <section class="secao vermelha">
+    <h2>Favoritos da casa</h2>
+    <div class="grade">
+      <article class="produto">
+        <div class="foto">🌯</div>
+        <h3>Temaki Salmão</h3>
+        <p>Cone de alga crocante com salmão fresco e cream cheese.</p>
+        <div class="linha"><strong>R$ 28,90</strong><a class="btn" href="produtos.html">Ver</a></div>
+      </article>
+      <article class="produto">
+        <div class="foto">🍣</div>
+        <h3>Sashimi de Salmão</h3>
+        <p>Fatias finas de salmão fresco, direto do mar.</p>
+        <div class="linha"><strong>R$ 42,90</strong><a class="btn" href="produtos.html">Ver</a></div>
+      </article>
+      <article class="produto">
+        <div class="foto">🥗</div>
+        <h3>Poke de Salmão</h3>
+        <p>Salmão, arroz, manga e cebolinha em uma tigela.</p>
+        <div class="linha"><strong>R$ 38,90</strong><a class="btn" href="produtos.html">Ver</a></div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <div class="rodape-grade">
+      <div><h4>🍣 Sushi San</h4><p>Frescor de verdade, em qualquer hora.</p></div>
+      <div><h4>Navegação</h4><a href="produtos.html">Produtos</a><a href="pedidos.html">Meus pedidos</a><a href="carrinho.html">Carrinho</a></div>
+      <div><h4>Conta</h4><a href="login.html">Entrar</a><a href="login.html?aba=cadastro">Cadastrar</a><a href="perfil.html">Perfil</a></div>
+      <div><h4>Contato</h4><p>(31) 99690-5239 </p><p>22500367@aluno.cotemig.com</p></div>
+    </div>
+    <p class="copy">© 2026 Sushi San - Site sushi </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos - Sushi San</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <a class="logo" href="index.html">🍣 Sushi San</a>
+    <button class="hamburguer" onclick="abrirMenu()" aria-label="Abrir menu">☰</button>
+    <nav id="menu" class="menu">
+      <a href="index.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="pedidos.html">Pedidos</a>
+      <a href="carrinho.html">Carrinho <span class="contador">0</span></a>
+      <a href="perfil.html">Perfil</a>
+      <span id="areaLogin">
+        <a class="btn-mini" href="login.html">Entrar</a>
+        <a class="btn-mini destaque" href="login.html?aba=cadastro">Cadastrar</a>
+      </span>
+      <button id="btnTema" class="tema" onclick="trocarTema()">☀️</button>
+    </nav>
+  </header>
+
+  <h1 class="titulo-pagina">Favoritos da casa</h1>
+
+  <section class="secao" style="padding-top:10px">
+    <!-- FERRAMENTA DE BUSCA -->
+    <div class="barra-busca">
+      <input type="text" id="busca" placeholder="🔍 Buscar produto..." maxlength="30" onkeyup="filtrarProdutos()">
+    </div>
+
+    <div class="filtros">
+      <button class="filtro ativo" onclick="escolherCategoria('todos', this)">Todos</button>
+      <button class="filtro" onclick="escolherCategoria('combinados', this)">Combinados</button>
+      <button class="filtro" onclick="escolherCategoria('hot', this)">Hot rolls</button>
+      <button class="filtro" onclick="escolherCategoria('sashimi', this)">Sashimi</button>
+      <button class="filtro" onclick="escolherCategoria('temaki', this)">Temaki</button>
+      <button class="filtro" onclick="escolherCategoria('poke', this)">Poke</button>
+    </div>
+
+    <div class="grade">
+
+      <article class="produto" data-nome="Combo San 20 peças" data-cat="combinados">
+        <div class="foto">🍱</div>
+        <h3>Combo San 20 peças</h3>
+        <p>Salmão, uramaki e hot roll variados.</p>
+        <div class="linha"><strong>R$ 59,90</strong><button class="btn" onclick="adicionar('Combo San 20 peças', 59.9, '🍱')">Adicionar</button></div>
+      </article>
+
+      <article class="produto" data-nome="Combo Casal 32 peças" data-cat="combinados">
+        <div class="foto">🍱</div>
+        <h3>Combo Casal 32 peças</h3>
+        <p>O combinado perfeito para dividir a dois.</p>
+        <div class="linha"><strong>R$ 89,90</strong><button class="btn" onclick="adicionar('Combo Casal 32 peças', 89.9, '🍱')">Adicionar</button></div>
+      </article>
+
+      <article class="produto" data-nome="Hot Roll Salmão" data-cat="hot">
+        <div class="foto">🍤</div>
+        <h3>Hot Roll Salmão</h3>
+        <p>10 unidades empanadas e crocantes, com molho tarê.</p>
+        <div class="linha"><strong>R$ 32,90</strong><button class="btn" onclick="adicionar('Hot Roll Salmão', 32.9, '🍤')">Adicionar</button></div>
+      </article>
+
+      <article class="produto" data-nome="Hot Philadelphia" data-cat="hot">
+        <div class="foto">🍣</div>
+        <h3>Hot Philadelphia</h3>
+        <p>10 unidades com salmão e cream cheese.</p>
+        <div class="linha"><strong>R$ 34,90</strong><button class="btn" onclick="adicionar('Hot Philadelphia', 34.9, '🍣')">Adicionar</button></div>
+      </article>
+
+      <article class="produto" data-nome="Sashimi de Salmão" data-cat="sashimi">
+        <div class="foto">🐟</div>
+        <h3>Sashimi de Salmão</h3>
+        <p>10 fatias finas de salmão fresco.</p>
+        <div class="linha"><strong>R$ 42,90</strong><button class="btn" onclick="adicionar('Sashimi de Salmão', 42.9, '🐟')">Adicionar</button></div>
+      </article>
+
+      <article class="produto" data-nome="Temaki Salmão" data-cat="temaki">
+        <div class="foto">🌯</div>
+        <h3>Temaki Salmão</h3>
+        <p>Cone de alga com salmão fresco e cream cheese.</p>
+        <div class="linha"><strong>R$ 28,90</strong><button class="btn" onclick="adicionar('Temaki Salmão', 28.9, '🌯')">Adicionar</button></div>
+      </article>
+
+      <article class="produto" data-nome="Temaki Skin" data-cat="temaki">
+        <div class="foto">🌯</div>
+        <h3>Temaki Skin</h3>
+        <p>Pele de salmão crocante com cebolinha.</p>
+        <div class="linha"><strong>R$ 24,90</strong><button class="btn" onclick="adicionar('Temaki Skin', 24.9, '🌯')">Adicionar</button></div>
+      </article>
+
+      <article class="produto" data-nome="Poke de Salmão" data-cat="poke">
+        <div class="foto">🥗</div>
+        <h3>Poke de Salmão</h3>
+        <p>Salmão, arroz, manga e cebolinha em uma tigela.</p>
+        <div class="linha"><strong>R$ 38,90</strong><button class="btn" onclick="adicionar('Poke de Salmão', 38.9, '🥗')">Adicionar</button></div>
+      </article>
+
+    </div>
+  </section>
+
+ <footer class="rodape">
+    <div class="rodape-grade">
+      <div><h4>🍣 Sushi San</h4><p>Frescor de verdade, em qualquer hora.</p></div>
+      <div><h4>Navegação</h4><a href="produtos.html">Produtos</a><a href="pedidos.html">Meus pedidos</a><a href="carrinho.html">Carrinho</a></div>
+      <div><h4>Conta</h4><a href="login.html">Entrar</a><a href="login.html?aba=cadastro">Cadastrar</a><a href="perfil.html">Perfil</a></div>
+      <div><h4>Contato</h4><p>(31) 99690-5239 </p><p>22500367@aluno.cotemig.com</p></div>
+    </div>
+    <p class="copy">© 2026 Sushi San - Site sushi </p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>buscaDaUrl();</script>
+</body>
+</html>
